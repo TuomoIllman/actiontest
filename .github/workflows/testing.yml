@@ -9,19 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: filecreation
-      run: | 
-        touch info.txt
-        echo "Hei vaa" > info.txt
-        cat info.txt
-        - name: backup
-        run: |
-        mkdir backup
-        cp info.txt backup/info.txt
-        - name: contents
-        run: |
-        ls -al
-        ls -al backup
-        cat info.txt
+        run: | 
+          touch info.txt
+          echo "Hei vaa" > info.txt
+          cat info.txt
+          - name: backup
+          run: |
+          mkdir backup
+          cp info.txt backup/info.txt
+          - name: contents
+          run: |
+          ls -al
+          ls -al backup
+  yesno:
+    runs-on: ubuntu-latest
+    steps:
+    - run: curl https://yesno.wtf/api 
+      
+    
         
     
     

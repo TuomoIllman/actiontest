@@ -11,7 +11,7 @@ jobs:
       - name: filecreation
         run: | 
           touch info.txt
-          echo "Hei vaa" > info.txt
+          echo Hei vaa > info.txt
           cat info.txt
           - name: backup
           run: |

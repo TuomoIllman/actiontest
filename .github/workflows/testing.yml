@@ -1,0 +1,17 @@
+name: Testing
+on: 
+  issues:
+    types: opened
+  workflow_dispatch:
+    
+jobs: 
+  files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: filecreation
+      run: | 
+        touch info.txt
+        echo "Hei vaa" > info.txt
+        cat info.txt
+    
+    

@@ -13,5 +13,15 @@ jobs:
         touch info.txt
         echo "Hei vaa" > info.txt
         cat info.txt
+        - name: backup
+        run: |
+        mkdir backup
+        cp info.txt backup/info.txt
+        - name: contents
+        run: |
+        ls -al
+        ls -al backup
+        cat info.txt
+        
     
     

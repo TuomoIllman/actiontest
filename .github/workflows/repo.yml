@@ -2,11 +2,14 @@ name: Checkout repo
 on: workflow_dispatch
     
 jobs: 
-  repo-test:
+  files:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v7
-    - name: Commands
-      run: git log --oneline
+        - name: printName
+          run: |
+            echo "Tuomo" > info.txt
+            echo "23" > info.txt
+            echo "Illman" > info.txt
+     
+       
       

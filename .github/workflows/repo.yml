@@ -1,15 +1,28 @@
-name: Checkout repo
+name: JobHarjoitus1
 on: workflow_dispatch
     
 jobs: 
-  files:
+  First:
     runs-on: ubuntu-latest
     steps:
-        - name: printName
-          run: |
-            echo "Tuomo" > info.txt
-            echo "23" > info.txt
-            echo "Illman" > info.txt
+        - name: PrintName
+          run: echo "Tuomo" 
+  Second:
+      needs: First
+      runs-on: ubuntu-latest
+      steps:
+        - name: PrintAge
+          run: echo "23"
+
+  Third:
+      needs: Second
+      runs-on: ubuntu-latest
+      steps:
+        - name: PrintLname
+          run: echo "Illman" >
+        
+            
+            
      
        
       
